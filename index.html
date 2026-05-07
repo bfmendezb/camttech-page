@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* CORRECCIÓN DEFINITIVA DEL SCROLL HORIZONTAL (RAYA BLANCA) */
+        /* CORRECCIÓN DEFINITIVA DEL SCROLL HORIZONTAL */
         html, body {
             max-width: 100vw !important;
             overflow-x: hidden !important;
@@ -105,12 +105,12 @@
     <!-- Navbar -->
     <header class="fixed w-full glass-header z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-28">
+            <!-- Barra con altura dinámica basada en el logo -->
+            <div class="flex justify-between items-center py-3 md:py-4">
                 
-                <!-- LOGO EXTRAÍDO DE ARCHIVO -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer py-2" onclick="window.scrollTo(0,0)">
-                    <!-- Asegúrate de que tu imagen se llame exactamente logo.png y esté en GitHub -->
-                    <img src="./logo.png" alt="CAMT-TECH INGENIERÍA" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm">
+                <!-- LOGO REDIMENSIONADO: Usamos "width" en lugar de "height" -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer w-44 sm:w-56 md:w-64 lg:w-72" onclick="window.scrollTo(0,0)">
+                    <img src="./logo.png" alt="CAMT-TECH INGENIERÍA" class="w-full h-auto object-contain drop-shadow-sm scale-110 md:scale-125 origin-left">
                 </div>
 
                 <!-- Desktop Menu -->
@@ -122,7 +122,7 @@
                 </nav>
 
                 <!-- CTA Button WhatsApp -->
-                <div class="hidden lg:flex items-center">
+                <div class="hidden lg:flex items-center ml-4">
                     <a href="https://wa.me/573213508880?text=Hola,%20vengo%20de%20la%20página%20web%20y%20deseo%20asesoría." target="_blank" class="bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3 rounded-md font-bold transition-all shadow-md flex items-center gap-2">
                         <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp
                     </a>
@@ -151,7 +151,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg relative pt-36 pb-20 lg:pt-48 lg:pb-32 flex items-center min-h-screen w-full">
+    <section class="hero-bg relative pt-40 pb-20 lg:pt-56 lg:pb-32 flex items-center min-h-screen w-full">
         <div class="absolute inset-0 bg-slate-900/30"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -527,9 +527,9 @@
                 <div>
                     <!-- LOGO EXTRAÍDO DE ARCHIVO (PIE DE PÁGINA) -->
                     <div class="flex flex-col items-start mb-6">
-                        <!-- El fondo blanco hace que las letras oscuras del logo png destaquen en el fondo negro -->
-                        <div class="bg-white/90 p-3 rounded-xl inline-block mb-3 shadow-md">
-                            <img src="./logo.png" alt="CAMT-TECH INGENIERÍA" class="h-8 md:h-10 w-auto object-contain">
+                        <div class="bg-white/95 p-3 sm:p-4 rounded-xl inline-block shadow-md">
+                            <!-- Tamaño dinámico en el footer -->
+                            <img src="./logo.png" alt="CAMT-TECH INGENIERÍA" class="w-40 sm:w-48 h-auto object-contain">
                         </div>
                     </div>
                     <p class="text-slate-400 text-sm max-w-sm">
