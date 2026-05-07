@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAMTTECH INGENIERÍA | Máquinas de Ensayo para la Industria</title>
-    <meta name="description" content="Camttech SAS - Especialistas en desarrollo, comercialización y mantenimiento de máquinas de ensayo y equipos de medición para la gran industria en Colombia.">
+    <title>CAMT-TECH INGENIERÍA | Máquinas de Ensayo y Medición</title>
+    <meta name="description" content="Camttech S.A.S. - Más de 20 años ofreciendo soluciones en equipos de medición, automatización, mantenimiento y calibración ONAC.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -12,8 +12,8 @@
                 extend: {
                     colors: {
                         camttech: {
-                            blue: '#165281', // Azul corporativo serio y profesional
-                            dark: '#0f172a', // Pizarra oscuro
+                            blue: '#165281', // Azul corporativo
+                            dark: '#0f172a',
                             light: '#f8fafc'
                         }
                     }
@@ -21,17 +21,22 @@
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons para ui general -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- FontAwesome para Logos Oficiales (WhatsApp, LinkedIn, Facebook) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         html { scroll-behavior: smooth; }
         body { 
             font-family: 'Inter', sans-serif;
-            color: #1e293b; /* slate-800 */
-            background-color: #f8fafc; /* slate-50 */
+            color: #1e293b;
+            background-color: #f8fafc;
         }
         
-        /* Imagen de fondo VÍVIDA solo para el Hero (con parallax) */
         .hero-bg {
             background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80');
             background-size: cover;
@@ -39,18 +44,16 @@
             background-attachment: fixed;
         }
         
-        /* Glasmorfismo Premium (Frosted Glass) */
         .glass-panel {
-            background: rgba(255, 255, 255, 0.65);
+            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 1);
             box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
         }
         
-        /* Variante más transparente para usar sobre imágenes */
         .glass-panel-heavy {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 1);
@@ -58,7 +61,7 @@
         }
 
         .glass-header {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.6);
@@ -66,7 +69,7 @@
         }
 
         .glass-input {
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.8);
             border: 1px solid rgba(203, 213, 225, 1);
             color: #0f172a;
             transition: all 0.2s ease;
@@ -78,93 +81,116 @@
             box-shadow: 0 0 0 3px rgba(22, 82, 129, 0.15);
             outline: none;
         }
+
+        /* Utilidad para oscurecer imágenes de fondo en las tarjetas de servicio */
+        .image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.2) 100%);
+            z-index: 10;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-camttech-blue selection:text-white relative overflow-x-hidden">
 
+    <!-- Navbar -->
     <header class="fixed w-full glass-header z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <div class="flex flex-col items-center">
-                        <div class="font-bold text-3xl tracking-tighter text-slate-900 flex items-center">
-                            CAM<span class="text-camttech-blue flex items-center mx-1">
-                                T<span class="inline-block w-2 h-2 bg-camttech-blue rounded-sm mx-[2px] mt-1"></span>TECH
-                            </span>
+            <div class="flex justify-between items-center h-24">
+                
+                <!-- Logo Reconstruido Estilo PDF -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="font-black text-3xl md:text-4xl tracking-tighter flex items-center leading-none" style="font-family: Arial, Helvetica, sans-serif;">
+                            <span class="text-slate-900">CAMT</span>
+                            <span class="text-camttech-blue mx-1">-</span>
+                            <span class="text-camttech-blue">TECH</span>
                         </div>
-                        <span class="text-[10px] tracking-[0.4em] font-medium text-slate-500 uppercase mt-[-4px]">Ingenieria</span>
+                        <div class="w-full h-[2px] bg-slate-200 my-[2px]"></div>
+                        <span class="text-[10px] md:text-[11px] tracking-[0.45em] font-bold text-slate-500 uppercase ml-1">Ingeniería</span>
                     </div>
                 </div>
 
-                <nav class="hidden md:flex space-x-8">
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-8">
                     <a href="#nosotros" class="text-slate-700 hover:text-camttech-blue font-semibold transition-colors">Nosotros</a>
-                    <a href="#productos" class="text-slate-700 hover:text-camttech-blue font-semibold transition-colors">Equipos y Máquinas</a>
-                    <a href="#servicios" class="text-slate-700 hover:text-camttech-blue font-semibold transition-colors">Servicios</a>
+                    <a href="#productos" class="text-slate-700 hover:text-camttech-blue font-semibold transition-colors">Equipos y Software</a>
+                    <a href="#servicios" class="text-slate-700 hover:text-camttech-blue font-semibold transition-colors">Servicios Integrales</a>
                     <a href="#contacto" class="text-slate-700 hover:text-camttech-blue font-semibold transition-colors">Contacto</a>
                 </nav>
 
-                <div class="hidden md:flex items-center">
-                    <a href="#contacto" class="bg-camttech-blue hover:bg-blue-900 text-white px-6 py-2.5 rounded-md font-semibold transition-all shadow-md flex items-center gap-2">
-                        <i data-lucide="mail" class="w-4 h-4"></i> Asesoría Técnica
+                <!-- CTA Button WhatsApp -->
+                <div class="hidden lg:flex items-center">
+                    <a href="https://wa.me/573213508880?text=Hola,%20vengo%20de%20la%20página%20web%20y%20deseo%20asesoría." target="_blank" class="bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3 rounded-md font-bold transition-all shadow-md flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp
                     </a>
                 </div>
 
-                <div class="md:hidden flex items-center">
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-slate-700 hover:text-camttech-blue focus:outline-none p-2">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
+                        <i data-lucide="menu" class="w-8 h-8"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200">
-            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
-                <a href="#nosotros" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-camttech-blue hover:bg-slate-50 rounded-md">Nosotros</a>
-                <a href="#productos" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-camttech-blue hover:bg-slate-50 rounded-md">Equipos y Máquinas</a>
-                <a href="#servicios" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-camttech-blue hover:bg-slate-50 rounded-md">Servicios</a>
-                <a href="#contacto" class="block px-3 py-2 text-base font-semibold text-camttech-blue bg-blue-50/50 rounded-md">Contacto</a>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-200">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#nosotros" class="block px-3 py-3 text-lg font-semibold text-slate-800 hover:text-camttech-blue hover:bg-slate-50 rounded-md">Nosotros</a>
+                <a href="#productos" class="block px-3 py-3 text-lg font-semibold text-slate-800 hover:text-camttech-blue hover:bg-slate-50 rounded-md">Equipos y Software</a>
+                <a href="#servicios" class="block px-3 py-3 text-lg font-semibold text-slate-800 hover:text-camttech-blue hover:bg-slate-50 rounded-md">Servicios Integrales</a>
+                <a href="https://wa.me/573213508880" target="_blank" class="block px-3 py-3 text-lg font-bold text-white bg-[#25D366] rounded-md flex items-center justify-center gap-2 mt-4">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Contactar por WhatsApp
+                </a>
             </div>
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero-bg relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center min-h-screen">
-        <div class="absolute inset-0 bg-slate-900/10"></div>
+        <div class="absolute inset-0 bg-slate-900/30"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Tarjeta Frosted Glass -->
             <div class="max-w-3xl glass-panel-heavy p-10 lg:p-14 rounded-2xl">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-camttech-blue/20 bg-blue-50/80 text-camttech-blue text-sm font-bold tracking-wider uppercase mb-6">
-                    <i data-lucide="shield-check" class="w-4 h-4"></i> Tecnología en Control de Calidad
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-camttech-blue/20 bg-blue-50/90 text-camttech-blue text-sm font-bold tracking-wider uppercase mb-6 shadow-sm">
+                    <i data-lucide="award" class="w-4 h-4"></i> +20 Años de Experiencia
                 </div>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
-                    Precisión Absoluta para los <span class="text-camttech-blue">Ensayos de su Industria</span>
+                    Soluciones Innovadoras en <span class="text-camttech-blue">Medición y Automatización</span>
                 </h1>
                 <p class="text-lg sm:text-xl text-slate-700 mb-8 max-w-2xl font-medium">
-                    Suministramos e implementamos máquinas de ensayo universal y equipos de medición para las industrias más exigentes. Calidad y trazabilidad que cumple con normativas internacionales.
+                    Aliados estratégicos para la industria y metrología. Suministramos máquinas de ensayo, servicios de calibración ONAC, mantenimiento multimarca y automatización de laboratorios.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#productos" class="bg-camttech-blue text-white px-8 py-3.5 rounded-md font-semibold text-lg hover:bg-blue-900 transition-colors shadow-lg flex items-center justify-center gap-2 border border-transparent">
-                        Catálogo de Equipos <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    <a href="#productos" class="bg-camttech-blue text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-blue-900 transition-colors shadow-lg flex items-center justify-center gap-2">
+                        Ver Catálogo <i data-lucide="arrow-right" class="w-5 h-5"></i>
                     </a>
-                    <a href="#contacto" class="bg-white/90 text-slate-900 border border-slate-200 px-8 py-3.5 rounded-md font-bold text-lg hover:bg-white transition-colors shadow-sm flex items-center justify-center">
-                        Contactar Asesor
+                    <a href="https://wa.me/573213508880" target="_blank" class="bg-[#25D366] text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-[#128C7E] transition-colors shadow-sm flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> Chat Inmediato
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Partners / Industrias Section -->
     <section class="py-10 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-6">Equipando los laboratorios de las mejores empresas en Colombia</p>
-            <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-slate-400">
-                <div class="flex items-center gap-2 font-bold text-xl"><i data-lucide="building-2"></i> Industria Metalúrgica</div>
-                <div class="flex items-center gap-2 font-bold text-xl"><i data-lucide="box"></i> Sector Plásticos</div>
-                <div class="flex items-center gap-2 font-bold text-xl"><i data-lucide="truck"></i> Automotriz & Partes</div>
-                <div class="flex items-center gap-2 font-bold text-xl"><i data-lucide="hammer"></i> Construcción</div>
+            <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-6">Equipando los laboratorios de los principales sectores</p>
+            <div class="flex flex-wrap justify-center gap-6 md:gap-12 text-slate-500">
+                <div class="flex items-center gap-2 font-bold text-lg"><i data-lucide="building-2"></i> Ing. Civil</div>
+                <div class="flex items-center gap-2 font-bold text-lg"><i data-lucide="box"></i> Plásticos & Empaques</div>
+                <div class="flex items-center gap-2 font-bold text-lg"><i data-lucide="settings"></i> Aceros & Metalurgia</div>
+                <div class="flex items-center gap-2 font-bold text-lg"><i data-lucide="coffee"></i> Alimentos</div>
+                <div class="flex items-center gap-2 font-bold text-lg"><i data-lucide="car"></i> Autopartes</div>
             </div>
         </div>
     </section>
 
+    <!-- Nosotros Section -->
     <section id="nosotros" class="py-20 relative bg-slate-50 overflow-hidden">
         <div class="absolute top-0 right-0 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl -z-10"></div>
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-200/60 rounded-full blur-3xl -z-10"></div>
@@ -172,7 +198,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                 <div class="mb-10 lg:mb-0 relative">
-                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80" alt="Ingenieros trabajando con máquinas de ensayo" class="rounded-2xl shadow-xl w-full object-cover h-[500px]">
+                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80" alt="Ingenieros trabajando" class="rounded-2xl shadow-xl w-full object-cover h-[550px]">
                     
                     <div class="absolute -bottom-6 -right-2 sm:-right-6 glass-panel p-5 rounded-xl flex items-center gap-4">
                         <div class="bg-camttech-blue/10 p-3 rounded-full text-camttech-blue">
@@ -180,19 +206,19 @@
                         </div>
                         <div>
                             <p class="font-bold text-slate-900 text-lg">Sede Principal</p>
-                            <p class="text-sm text-slate-600 font-medium">Cajicá, Colombia</p>
+                            <p class="text-sm text-slate-600 font-medium">Calle 21 No. 5E-67<br>Cajicá, Cundinamarca</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="glass-panel p-8 sm:p-10 rounded-2xl relative z-10">
-                    <h2 class="text-camttech-blue font-bold tracking-wide uppercase text-sm mb-2">Sobre Camttech SAS</h2>
-                    <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6">Expertos en Instrumentación y Ensayos de Materiales</h3>
-                    <p class="text-slate-700 mb-6 text-lg leading-relaxed font-medium">
-                        Con sede en Cajicá, Cundinamarca, en <strong class="text-camttech-blue">CAMTTECH INGENIERÍA</strong> nos dedicamos a la fabricación, importación y comercialización de equipos de medición, prueba y control (Código CIIU 2651).
+                    <h2 class="text-camttech-blue font-bold tracking-wide uppercase text-sm mb-2">Sobre Camttech S.A.S.</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6">Su Aliado Estratégico en Calidad y Metrología</h3>
+                    <p class="text-slate-700 mb-4 text-lg leading-relaxed font-medium">
+                        Somos una empresa con <strong class="text-camttech-blue">más de 20 años de experiencia</strong> dedicada a garantizar la precisión y confiabilidad que su empresa necesita para operar con los más altos estándares.
                     </p>
                     <p class="text-slate-700 mb-8 text-lg leading-relaxed font-medium">
-                        Proveemos soluciones integrales, fusionando hardware de alta resistencia con software avanzado para garantizar que los materiales de su empresa cumplan con los estándares internacionales (ASTM, ISO, DIN).
+                        Brindamos soluciones personalizadas que se ajustan a las necesidades específicas de grandes empresas en diferentes sectores económicos, optimizando procesos a través de tecnología e innovación.
                     </p>
                     
                     <ul class="space-y-4">
@@ -201,8 +227,8 @@
                                 <i data-lucide="check-circle-2" class="w-5 h-5 text-camttech-blue"></i>
                             </div>
                             <div class="ml-3">
-                                <p class="text-slate-900 font-bold">Alta Precisión Tecnológica</p>
-                                <p class="text-slate-600 text-sm font-medium">Celdas de carga y sensores de última generación.</p>
+                                <p class="text-slate-900 font-bold">Fabricación y Distribución</p>
+                                <p class="text-slate-600 text-sm font-medium">Equipos de laboratorio adaptados a sus requerimientos específicos.</p>
                             </div>
                         </li>
                         <li class="flex items-start">
@@ -210,8 +236,8 @@
                                 <i data-lucide="check-circle-2" class="w-5 h-5 text-camttech-blue"></i>
                             </div>
                             <div class="ml-3">
-                                <p class="text-slate-900 font-bold">Cumplimiento Normativo</p>
-                                <p class="text-slate-600 text-sm font-medium">Sistemas preparados para auditorías y certificaciones.</p>
+                                <p class="text-slate-900 font-bold">Calibraciones Acreditadas</p>
+                                <p class="text-slate-600 text-sm font-medium">Servicios acreditados ONAC según norma ISO/IEC 17025:2017.</p>
                             </div>
                         </li>
                     </ul>
@@ -220,159 +246,215 @@
         </div>
     </section>
 
+    <!-- Productos Section -->
     <section id="productos" class="py-20 relative bg-white overflow-hidden">
-        <div class="absolute top-20 left-10 w-72 h-72 bg-camttech-blue/5 rounded-full blur-3xl -z-10"></div>
-        <div class="absolute bottom-20 right-10 w-96 h-96 bg-slate-100 rounded-full blur-3xl -z-10"></div>
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 glass-panel p-8 rounded-2xl relative z-10">
                 <h2 class="text-camttech-blue font-bold tracking-wide uppercase text-sm mb-2">Nuestro Portafolio</h2>
-                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">Equipos de Ensayo Industrial</h3>
-                <p class="text-slate-600 text-lg font-medium">Soluciones robustas para determinar las propiedades mecánicas de metales, plásticos, textiles, caucho y empaques.</p>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">Equipos, Software e Ingeniería</h3>
+                <p class="text-slate-600 text-lg font-medium">Desde máquinas electromecánicas de 1kN hasta marcos hidráulicos de 1000kN, abarcamos las necesidades de todas las industrias.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-panel rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 group relative z-10">
-                    <div class="relative h-60 overflow-hidden bg-white">
-                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80" alt="Máquina de Ensayo Universal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply">
+                <!-- Producto 1 -->
+                <div class="glass-panel rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 group flex flex-col">
+                    <div class="relative h-64 overflow-hidden bg-white">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80" alt="Máquinas de Ensayo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div class="p-8 border-t border-white/50">
-                        <h4 class="text-xl font-bold text-slate-900 mb-3">Máquinas de Ensayo Universal (MUE)</h4>
-                        <p class="text-slate-600 mb-6 text-sm font-medium line-clamp-3">Equipos electromecánicos e hidráulicos para pruebas de tracción, compresión y flexión. Capacidades desde 5kN hasta 2000kN con software de control avanzado.</p>
-                        <a href="#contacto" class="text-camttech-blue font-bold hover:text-blue-900 flex items-center gap-1">Solicitar Cotización <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
-                    </div>
-                </div>
-
-                <div class="glass-panel rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 group relative z-10">
-                    <div class="relative h-60 overflow-hidden bg-white">
-                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80" alt="Equipos para Plásticos y Embalajes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply">
-                    </div>
-                    <div class="p-8 border-t border-white/50">
-                        <h4 class="text-xl font-bold text-slate-900 mb-3">Equipos para Plásticos y Empaques</h4>
-                        <p class="text-slate-600 mb-6 text-sm font-medium line-clamp-3">Medidores de índice de fluidez, probadores de caída libre para embalajes, ensayos de coeficiente de fricción y pruebas de pelado.</p>
-                        <a href="#contacto" class="text-camttech-blue font-bold hover:text-blue-900 flex items-center gap-1">Solicitar Cotización <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    <div class="p-8 border-t border-slate-100 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-3">Máquinas de Ensayo Universal</h4>
+                            <p class="text-slate-600 mb-4 text-sm font-medium">Equipos electromecánicos e hidráulicos para tensión, compresión y flexión. Capacidades desde 1kN hasta 1000kN.</p>
+                        </div>
+                        <a href="#contacto" class="text-camttech-blue font-bold hover:text-blue-900 flex items-center gap-1 mt-auto">Cotizar Equipo <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
                     </div>
                 </div>
 
-                <div class="glass-panel rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 group relative z-10">
-                    <div class="relative h-60 overflow-hidden bg-white">
-                        <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&q=80" alt="Máquina de Ensayo de Impacto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply">
+                <!-- Producto 2 (IMAGEN CORREGIDA) -->
+                <div class="glass-panel rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 group flex flex-col">
+                    <div class="relative h-64 overflow-hidden bg-white">
+                        <!-- Aquí está el nuevo enlace de la imagen de Ingeniería Civil -->
+                        <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=800&q=80" alt="Línea Ingeniería Civil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-camttech-blue text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">Distribuidores ELE Intl.</div>
                     </div>
-                    <div class="p-8 border-t border-white/50">
-                        <h4 class="text-xl font-bold text-slate-900 mb-3">Péndulos de Impacto y Durómetros</h4>
-                        <p class="text-slate-600 mb-6 text-sm font-medium line-clamp-3">Máquinas para ensayo de impacto Izod/Charpy para materiales macromoleculares. Durómetros digitales Rockwell y accesorios.</p>
-                        <a href="#contacto" class="text-camttech-blue font-bold hover:text-blue-900 flex items-center gap-1">Solicitar Cotización <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    <div class="p-8 border-t border-slate-100 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-3">Línea de Ingeniería Civil</h4>
+                            <p class="text-slate-600 mb-4 text-sm font-medium">Equipos y aditamentos especializados para ensayos en agregados, concretos, asfaltos, cementos y rocas. Prensas de compresión.</p>
+                        </div>
+                        <a href="#contacto" class="text-camttech-blue font-bold hover:text-blue-900 flex items-center gap-1 mt-auto">Cotizar Línea Civil <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="glass-panel rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 group flex flex-col">
+                    <div class="relative h-64 overflow-hidden bg-slate-900 flex items-center justify-center">
+                        <i data-lucide="monitor-waveform" class="w-24 h-24 text-camttech-blue/50 absolute z-10"></i>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80" alt="Software SISCAL LAB" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 border-t border-slate-100 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-3">Licencia Software SISCAL LAB</h4>
+                            <p class="text-slate-600 mb-4 text-sm font-medium">Totalmente en español. Gráficas en tiempo real, múltiples unidades y configurado para normas internacionales (ASTM, ISO, NTC).</p>
+                        </div>
+                        <a href="#contacto" class="text-camttech-blue font-bold hover:text-blue-900 flex items-center gap-1 mt-auto">Solicitar Demo <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
                     </div>
                 </div>
             </div>
             
-            <div class="mt-12 glass-panel rounded-2xl p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between border-l-4 border-l-camttech-blue relative z-10">
-                <div class="max-w-2xl mb-6 md:mb-0">
-                    <h4 class="text-2xl font-bold text-slate-900 mb-3">Accesorios, Mordazas y Celdas de Carga</h4>
-                    <p class="text-slate-600 font-medium">Complementamos sus equipos con un catálogo especializado de mordazas neumáticas, platos de compresión y extensómetros.</p>
+            <!-- Banner Suministros -->
+            <div class="mt-12 glass-panel rounded-2xl p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between border-l-4 border-l-camttech-blue shadow-lg">
+                <div class="max-w-3xl mb-6 md:mb-0">
+                    <h4 class="text-2xl font-bold text-slate-900 mb-3">Suministros, Sensores y Accesorios</h4>
+                    <p class="text-slate-600 font-medium">Contamos con un amplio inventario de <strong class="text-slate-800">extensómetros de baja y alta elongación</strong>, mordazas neumáticas/mecánicas, celdas de carga y dispositivos especiales.</p>
                 </div>
                 <div class="flex-shrink-0">
-                    <a href="#contacto" class="bg-camttech-blue text-white px-6 py-3 rounded-md font-bold hover:bg-blue-900 transition-colors shadow-lg">
-                        Consultar Repuestos
+                    <a href="https://wa.me/573213508880?text=Deseo%20cotizar%20accesorios/repuestos" target="_blank" class="bg-camttech-blue text-white px-8 py-4 rounded-md font-bold hover:bg-blue-900 transition-colors shadow-lg flex items-center gap-2">
+                        <i data-lucide="tool" class="w-5 h-5"></i> Cotizar Repuestos
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="servicios" class="py-20 bg-slate-50 relative overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-blue-100/40 rounded-full blur-3xl -z-10"></div>
-
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-20 bg-slate-100 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 glass-panel inline-block px-10 py-6 rounded-2xl mx-auto max-w-2xl w-full relative z-10">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Servicios y Soporte Técnico</h2>
-                <p class="mt-4 text-xl text-slate-600 font-medium">Respaldo integral para asegurar la continuidad de su operación.</p>
+            <div class="text-center mb-16 glass-panel inline-block px-10 py-6 rounded-2xl mx-auto max-w-2xl w-full">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Servicios Integrales</h2>
+                <p class="mt-4 text-xl text-slate-600 font-medium">Respaldo técnico, mantenimiento preventivo y actualización de su laboratorio.</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-                <div class="text-center glass-panel p-6 rounded-2xl relative z-10 hover:-translate-y-1 transition-transform duration-300">
-                    <div class="w-16 h-16 mx-auto bg-white text-camttech-blue rounded-full flex items-center justify-center mb-6 shadow-sm border border-slate-100">
-                        <i data-lucide="settings" class="w-8 h-8"></i>
+            <!-- Grilla de Servicios con Imágenes -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Servicio 1 -->
+                <div class="relative rounded-2xl overflow-hidden h-80 group cursor-pointer shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800" alt="Mantenimiento" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="image-overlay"></div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end z-20">
+                        <div class="w-12 h-12 bg-camttech-blue text-white rounded-lg flex items-center justify-center mb-4 shadow-md">
+                            <i data-lucide="wrench" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-2xl mb-2">Mantenimiento</h4>
+                        <p class="text-blue-100 text-sm font-medium line-clamp-2">Preventivo y correctivo multimarca para sistemas mecánicos, eléctricos e hidráulicos.</p>
                     </div>
-                    <h4 class="font-bold text-slate-900 text-lg mb-2">Instalación</h4>
-                    <p class="text-slate-600 text-sm font-medium">Puesta en marcha profesional asegurando la correcta integración.</p>
                 </div>
 
-                <div class="text-center glass-panel p-6 rounded-2xl relative z-10 hover:-translate-y-1 transition-transform duration-300">
-                    <div class="w-16 h-16 mx-auto bg-white text-camttech-blue rounded-full flex items-center justify-center mb-6 shadow-sm border border-slate-100">
-                        <i data-lucide="wrench" class="w-8 h-8"></i>
+                <!-- Servicio 2 -->
+                <div class="relative rounded-2xl overflow-hidden h-80 group cursor-pointer shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800" alt="Calibración ONAC" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="image-overlay"></div>
+                    <div class="absolute top-4 right-4 z-20">
+                        <span class="bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded-full shadow">ISO/IEC 17025</span>
                     </div>
-                    <h4 class="font-bold text-slate-900 text-lg mb-2">Mantenimiento</h4>
-                    <p class="text-slate-600 text-sm font-medium">Planes preventivos para evitar paradas operativas inesperadas.</p>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end z-20">
+                        <div class="w-12 h-12 bg-camttech-blue text-white rounded-lg flex items-center justify-center mb-4 shadow-md">
+                            <i data-lucide="file-check-2" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-2xl mb-2">Calibración ONAC</h4>
+                        <p class="text-blue-100 text-sm font-medium line-clamp-2">Acreditada en Fuerza, Presión, Temperatura, Velocidad, Longitud y Masa.</p>
+                    </div>
                 </div>
 
-                <div class="text-center glass-panel p-6 rounded-2xl relative z-10 hover:-translate-y-1 transition-transform duration-300">
-                    <div class="w-16 h-16 mx-auto bg-white text-camttech-blue rounded-full flex items-center justify-center mb-6 shadow-sm border border-slate-100">
-                        <i data-lucide="file-check-2" class="w-8 h-8"></i>
+                <!-- Servicio 3 -->
+                <div class="relative rounded-2xl overflow-hidden h-80 group cursor-pointer shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80&w=800" alt="Automatización" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="image-overlay"></div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end z-20">
+                        <div class="w-12 h-12 bg-camttech-blue text-white rounded-lg flex items-center justify-center mb-4 shadow-md">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-2xl mb-2">Automatización</h4>
+                        <p class="text-blue-100 text-sm font-medium line-clamp-2">Renovamos su laboratorio extendiendo la vida útil y ampliando capacidades con nuevo software.</p>
                     </div>
-                    <h4 class="font-bold text-slate-900 text-lg mb-2">Calibración</h4>
-                    <p class="text-slate-600 text-sm font-medium">Acompañamiento y gestión para asegurar trazabilidad metrológica.</p>
                 </div>
 
-                <div class="text-center glass-panel p-6 rounded-2xl relative z-10 hover:-translate-y-1 transition-transform duration-300">
-                    <div class="w-16 h-16 mx-auto bg-white text-camttech-blue rounded-full flex items-center justify-center mb-6 shadow-sm border border-slate-100">
-                        <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                <!-- Servicio 4 -->
+                <div class="relative rounded-2xl overflow-hidden h-80 group cursor-pointer shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" alt="Verificación" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="image-overlay"></div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end z-20">
+                        <div class="w-12 h-12 bg-camttech-blue text-white rounded-lg flex items-center justify-center mb-4 shadow-md">
+                            <i data-lucide="sliders-horizontal" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-2xl mb-2">Ajuste de Medición</h4>
+                        <p class="text-blue-100 text-sm font-medium line-clamp-2">Diagnóstico y ajuste de equipos de ensayos para garantizar resultados 100% precisos.</p>
                     </div>
-                    <h4 class="font-bold text-slate-900 text-lg mb-2">Capacitación</h4>
-                    <p class="text-slate-600 text-sm font-medium">Entrenamiento técnico a su personal en software y hardware.</p>
                 </div>
 
-                <div class="text-center glass-panel p-6 rounded-2xl relative z-10 hover:-translate-y-1 transition-transform duration-300 sm:col-span-2 lg:col-span-1">
-                    <div class="w-16 h-16 mx-auto bg-white text-camttech-blue rounded-full flex items-center justify-center mb-6 shadow-sm border border-slate-100">
-                        <i data-lucide="cpu" class="w-8 h-8"></i>
+                <!-- Servicio 5 -->
+                <div class="relative rounded-2xl overflow-hidden h-80 group cursor-pointer shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=800" alt="Capacitación" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="image-overlay"></div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end z-20">
+                        <div class="w-12 h-12 bg-camttech-blue text-white rounded-lg flex items-center justify-center mb-4 shadow-md">
+                            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-2xl mb-2">Capacitación</h4>
+                        <p class="text-blue-100 text-sm font-medium line-clamp-2">Entrenamiento en metrología básica y uso óptimo de hardware/software de laboratorio.</p>
                     </div>
-                    <h4 class="font-bold text-slate-900 text-lg mb-2">Automatización</h4>
-                    <p class="text-slate-600 text-sm font-medium">Integración de sistemas y automatización de procesos industriales.</p>
                 </div>
+
+                <!-- Servicio 6 -->
+                <div class="relative rounded-2xl overflow-hidden h-80 group cursor-pointer shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&q=80&w=800" alt="Alquiler" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="image-overlay"></div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end z-20">
+                        <div class="w-12 h-12 bg-camttech-blue text-white rounded-lg flex items-center justify-center mb-4 shadow-md">
+                            <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-2xl mb-2">Alquiler de Equipos</h4>
+                        <p class="text-blue-100 text-sm font-medium line-clamp-2">Continuidad garantizada para sus procesos productivos mientras reparamos su equipo.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <!-- Contacto / Formulario Section -->
     <section id="contacto" class="py-20 mb-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-panel rounded-2xl overflow-hidden lg:flex shadow-xl !p-0">
+            <div class="glass-panel rounded-2xl overflow-hidden lg:flex shadow-2xl !p-0">
                 
+                <!-- Contact Info -->
                 <div class="lg:w-2/5 p-10 lg:p-14 bg-camttech-blue text-white relative">
                     <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
                     
                     <div class="relative z-10 flex flex-col justify-between h-full">
                         <div>
                             <h3 class="text-3xl font-bold mb-4">Hablemos de su proyecto</h3>
-                            <p class="text-blue-100 mb-10 font-medium">Nuestros ingenieros evaluarán sus requerimientos técnicos y normativas aplicables para recomendarle la mejor solución.</p>
+                            <p class="text-blue-100 mb-10 font-medium leading-relaxed">Nuestro equipo interdisciplinario está listo para entender y satisfacer sus requerimientos normativos de manera eficiente y confiable.</p>
                             
                             <div class="space-y-8">
                                 <div class="flex items-start">
-                                    <div class="bg-white/20 p-2 rounded-lg mr-4">
+                                    <div class="bg-white/20 p-3 rounded-lg mr-4">
                                         <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-bold text-lg">Sede Principal</h4>
-                                        <p class="text-blue-100">Calle 21 5E 67<br>Cajicá, Cundinamarca</p>
+                                        <p class="text-blue-100">Calle 21 No. 5E-67<br>Cajicá, Cundinamarca</p>
                                     </div>
                                 </div>
                                 
                                 <div class="flex items-center">
-                                    <div class="bg-white/20 p-2 rounded-lg mr-4">
-                                        <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                                    <div class="bg-[#25D366] p-3 rounded-lg mr-4 shadow-lg animate-pulse">
+                                        <i class="fa-brands fa-whatsapp text-2xl text-white"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-lg">Teléfono</h4>
-                                        <p class="text-blue-100">+57 (Contacto en línea)</p>
+                                        <h4 class="font-bold text-lg">Línea WhatsApp</h4>
+                                        <a href="https://wa.me/573213508880" target="_blank" class="text-blue-50 font-bold hover:text-white transition-colors text-lg">+57 321 350 8880</a>
                                     </div>
                                 </div>
 
                                 <div class="flex items-center">
-                                    <div class="bg-white/20 p-2 rounded-lg mr-4">
+                                    <div class="bg-white/20 p-3 rounded-lg mr-4">
                                         <i data-lucide="mail" class="w-6 h-6 text-white"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-lg">Correo Electrónico</h4>
-                                        <p class="text-blue-100">info@camttech.com.co</p>
+                                        <h4 class="font-bold text-lg">Correos Comerciales</h4>
+                                        <p class="text-blue-100">comercial1@camttech.com<br>administrativo@camttech.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -380,58 +462,56 @@
 
                         <div class="mt-12 pt-8 border-t border-blue-400/30">
                             <p class="font-bold text-white mb-4">Síganos en nuestras redes:</p>
-                            <a href="https://linkedin.com/company/camttech" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 transition-colors border border-white/30">
-                                <i data-lucide="linkedin" class="w-6 h-6 text-white"></i>
-                            </a>
+                            <div class="flex gap-4">
+                                <a href="https://linkedin.com/company/camttech" target="_blank" class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#0077b5] hover:bg-[#005e93] transition-colors shadow-lg">
+                                    <i class="fa-brands fa-linkedin-in text-2xl text-white"></i>
+                                </a>
+                                <a href="https://facebook.com/Camttech" target="_blank" class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#1877F2] hover:bg-[#0c59c2] transition-colors shadow-lg">
+                                    <i class="fa-brands fa-facebook-f text-2xl text-white"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="p-10 lg:p-14 lg:w-3/5 bg-slate-50/50">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-8">Solicitud de Asesoría</h3>
-                    <form action="#" method="POST" class="space-y-6" onsubmit="event.preventDefault(); alert('Solicitud enviada correctamente. Un asesor se comunicará con usted.');">
+                <!-- Contact Form to WhatsApp -->
+                <div class="p-10 lg:p-14 lg:w-3/5 bg-slate-50">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Solicitud de Cotización Rápida</h3>
+                    <p class="text-slate-600 mb-8 font-medium">Llene el formulario y un ingeniero le responderá inmediatamente vía WhatsApp.</p>
+                    
+                    <form id="contactForm" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="first-name" class="block text-sm font-bold text-slate-700 mb-1">Nombre</label>
-                                <input type="text" name="first-name" id="first-name" class="glass-input block w-full rounded-md p-3" required>
+                                <label for="first-name" class="block text-sm font-bold text-slate-700 mb-1">Nombre Completo</label>
+                                <input type="text" id="first-name" class="glass-input block w-full rounded-md p-3" required>
                             </div>
                             <div>
                                 <label for="company" class="block text-sm font-bold text-slate-700 mb-1">Empresa</label>
-                                <input type="text" name="company" id="company" class="glass-input block w-full rounded-md p-3" required>
+                                <input type="text" id="company" class="glass-input block w-full rounded-md p-3" required>
                             </div>
                         </div>
                         
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="email" class="block text-sm font-bold text-slate-700 mb-1">Correo Corporativo</label>
-                                <input type="email" name="email" id="email" class="glass-input block w-full rounded-md p-3" required>
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-sm font-bold text-slate-700 mb-1">Teléfono</label>
-                                <input type="tel" name="phone" id="phone" class="glass-input block w-full rounded-md p-3">
-                            </div>
-                        </div>
-
                         <div>
-                            <label for="interest" class="block text-sm font-bold text-slate-700 mb-1">Equipo de Interés</label>
-                            <select id="interest" name="interest" class="glass-input block w-full rounded-md p-3 font-medium">
-                                <option>Máquina de Ensayo Universal (MUE)</option>
-                                <option>Sistemas de Impacto y Dureza</option>
-                                <option>Equipamiento para Plásticos/Empaques</option>
-                                <option>Accesorios (Celdas, Mordazas)</option>
-                                <option>Servicio Técnico / Automatización</option>
+                            <label for="interest" class="block text-sm font-bold text-slate-700 mb-1">Equipo o Servicio de Interés</label>
+                            <select id="interest" class="glass-input block w-full rounded-md p-3 font-medium cursor-pointer">
+                                <option>Máquinas Electromecánicas / Hidráulicas</option>
+                                <option>Equipos Ingeniería Civil (ELE Intl.)</option>
+                                <option>Licencia Software SISCAL LAB</option>
+                                <option>Servicio: Calibración ONAC</option>
+                                <option>Servicio: Mantenimiento / Automatización</option>
+                                <option>Accesorios (Extensómetros, Mordazas, Celdas)</option>
                                 <option>Otro Requerimiento</option>
                             </select>
                         </div>
 
                         <div>
-                            <label for="message" class="block text-sm font-bold text-slate-700 mb-1">Especificaciones (Normas, Capacidades)</label>
-                            <textarea id="message" name="message" rows="4" class="glass-input block w-full rounded-md p-3 font-medium" placeholder="Describa el material a ensayar o las normas aplicables..."></textarea>
+                            <label for="message" class="block text-sm font-bold text-slate-700 mb-1">Detalles Adicionales</label>
+                            <textarea id="message" rows="4" class="glass-input block w-full rounded-md p-3 font-medium" placeholder="Describa el material a ensayar o las normas aplicables..."></textarea>
                         </div>
 
                         <div class="pt-2">
-                            <button type="submit" class="w-full flex justify-center py-4 px-4 rounded-md shadow-md text-lg font-bold text-white bg-camttech-blue hover:bg-blue-900 transition-colors">
-                                Enviar Solicitud
+                            <button type="submit" class="w-full flex justify-center items-center gap-3 py-4 px-4 rounded-md shadow-lg text-lg font-bold text-white bg-[#25D366] hover:bg-[#128C7E] transition-all transform hover:-translate-y-1">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i> Enviar Mensaje por WhatsApp
                             </button>
                         </div>
                     </form>
@@ -440,45 +520,57 @@
         </div>
     </section>
 
+    <!-- Footer Corporativo -->
     <footer class="bg-slate-900 text-white py-12 border-t border-slate-800 relative z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
-                    <div class="font-bold text-2xl tracking-tighter text-white flex items-center mb-4">
-                        CAM<span class="text-blue-400 flex items-center mx-1">
-                            T<span class="inline-block w-1.5 h-1.5 bg-blue-400 rounded-sm mx-1 mt-1"></span>TECH
-                        </span>
+                    <!-- Logo Footer Ajustado -->
+                    <div class="font-bold text-2xl tracking-tighter text-white flex flex-col items-start mb-4" style="font-family: Arial, Helvetica, sans-serif;">
+                        <div class="flex">
+                            CAMT<span class="text-blue-400 mx-1">-</span>TECH
+                        </div>
+                        <div class="w-32 h-[1px] bg-slate-700 my-1"></div>
+                        <span class="text-[10px] tracking-widest font-normal text-slate-400 uppercase">Ingeniería</span>
                     </div>
-                    <p class="text-slate-400 text-sm max-w-sm">
-                        Especialistas en desarrollo y comercialización de equipos de medición, ensayo y automatización industrial en Colombia.
+                    <p class="text-slate-400 text-sm max-w-sm mb-4">
+                        Especialistas con más de 20 años de experiencia en desarrollo, comercialización, mantenimiento y calibración ONAC para la industria en Colombia.
                     </p>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <h4 class="text-lg font-bold mb-4 text-white">Líneas de Negocio</h4>
                     <ul class="space-y-2 text-sm text-slate-400">
-                        <li><a href="#nosotros" class="hover:text-white transition-colors">Sobre Nosotros</a></li>
-                        <li><a href="#productos" class="hover:text-white transition-colors">Catálogo de Equipos</a></li>
-                        <li><a href="#servicios" class="hover:text-white transition-colors">Servicios y Automatización</a></li>
+                        <li><a href="#productos" class="hover:text-camttech-blue transition-colors">Máquinas de Ensayo (1kN - 1000kN)</a></li>
+                        <li><a href="#productos" class="hover:text-camttech-blue transition-colors">Línea Ingeniería Civil (ELE)</a></li>
+                        <li><a href="#servicios" class="hover:text-camttech-blue transition-colors">Calibración Acreditada ONAC</a></li>
+                        <li><a href="#servicios" class="hover:text-camttech-blue transition-colors">Automatización y Renovación</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Contacto Legal</h4>
+                    <h4 class="text-lg font-bold mb-4 text-white">Información Legal y Contacto</h4>
                     <p class="text-sm text-slate-400 mb-2">CIIU 2651 - Fabricación de Equipo de Medición</p>
-                    <a href="https://linkedin.com/company/camttech" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-400 hover:text-blue-300 mt-2 gap-2 text-sm transition-colors font-semibold">
-                        <i data-lucide="linkedin" class="w-4 h-4"></i> Perfil en LinkedIn
-                    </a>
+                    <div class="flex flex-col gap-3 mt-4">
+                        <a href="https://wa.me/573213508880" target="_blank" class="inline-flex items-center text-[#25D366] hover:text-[#128C7E] gap-2 text-sm transition-colors font-bold">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Corporativo
+                        </a>
+                        <a href="https://linkedin.com/company/camttech" target="_blank" class="inline-flex items-center text-[#0077b5] hover:text-blue-400 gap-2 text-sm transition-colors font-bold">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i> Perfil en LinkedIn
+                        </a>
+                    </div>
                 </div>
             </div>
             
+            <!-- Firma Profesional -->
             <div class="border-t border-slate-800 pt-8 text-center text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
-                <p>&copy; 2026 Camttech SAS. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Camttech S.A.S. Todos los derechos reservados.</p>
                 <p class="mt-4 md:mt-0">Propuesta web desarrollada por <a href="https://brianmendez.me" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 font-bold transition-colors">Brian Felipe Mendez Bazurto</a></p>
             </div>
         </div>
     </footer>
 
+    <!-- Script para Íconos, Menú y Formulario a WhatsApp -->
     <script>
         // Inicializar Lucide Icons
         lucide.createIcons();
@@ -496,6 +588,28 @@
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
             });
+        });
+
+        // Función: Enviar el formulario directamente a WhatsApp
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('first-name').value;
+            const empresa = document.getElementById('company').value;
+            const interes = document.getElementById('interest').value;
+            const mensaje = document.getElementById('message').value;
+            
+            let textoWhatsApp = `Hola Camttech, soy *${nombre}* de la empresa *${empresa}*.\n\n`;
+            textoWhatsApp += `Estoy interesado/a en: *${interes}*.\n\n`;
+            
+            if (mensaje.trim() !== '') {
+                textoWhatsApp += `Detalles: ${mensaje}`;
+            }
+
+            const textoCodificado = encodeURIComponent(textoWhatsApp);
+            const telefono = '573213508880';
+            
+            window.open(`https://wa.me/${telefono}?text=${textoCodificado}`, '_blank');
         });
     </script>
 </body>
