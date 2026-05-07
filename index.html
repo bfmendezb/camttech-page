@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAMT-TECH INGENIERÍA | Máquinas de Ensayo y Medición</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CAMTTECH INGENIERÍA | Máquinas de Ensayo y Medición</title>
     <meta name="description" content="Camttech S.A.S. - Más de 20 años ofreciendo soluciones en equipos de medición, automatización, mantenimiento y calibración ONAC.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,8 +12,8 @@
                 extend: {
                     colors: {
                         camttech: {
-                            blue: '#165281', // Azul corporativo
-                            dark: '#0f172a',
+                            blue: '#3b82f6', // Azul del nuevo logo
+                            dark: '#262f3a', // Gris oscuro del logo
                             light: '#f8fafc'
                         }
                     }
@@ -30,13 +30,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* CORRECCIÓN DE LA RAYA BLANCA MÓVIL */
+        /* CORRECCIÓN DEFINITIVA DEL SCROLL HORIZONTAL (RAYA BLANCA) */
         html, body {
-            max-width: 100vw;
-            overflow-x: hidden;
+            max-width: 100vw !important;
+            overflow-x: hidden !important;
             width: 100%;
             position: relative;
             scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
         }
 
         body { 
@@ -85,8 +87,8 @@
 
         .glass-input:focus {
             background: rgba(255, 255, 255, 1);
-            border-color: #165281;
-            box-shadow: 0 0 0 3px rgba(22, 82, 129, 0.15);
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
             outline: none;
         }
 
@@ -98,24 +100,17 @@
         }
     </style>
 </head>
-<body class="antialiased selection:bg-camttech-blue selection:text-white">
+<body class="antialiased selection:bg-camttech-blue selection:text-white flex flex-col min-h-screen">
 
     <!-- Navbar -->
     <header class="fixed w-full glass-header z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-24">
+            <div class="flex justify-between items-center h-28">
                 
-                <!-- Logo Reconstruido Estilo PDF -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="font-black text-3xl md:text-4xl tracking-tighter flex items-center leading-none" style="font-family: Arial, Helvetica, sans-serif;">
-                            <span class="text-slate-900">CAMT</span>
-                            <span class="text-camttech-blue mx-1">-</span>
-                            <span class="text-camttech-blue">TECH</span>
-                        </div>
-                        <div class="w-full h-[2px] bg-slate-200 my-[2px]"></div>
-                        <span class="text-[10px] md:text-[11px] tracking-[0.45em] font-bold text-slate-500 uppercase ml-1">Ingeniería</span>
-                    </div>
+                <!-- LOGO EXTRAÍDO DE ARCHIVO -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer py-2" onclick="window.scrollTo(0,0)">
+                    <!-- Asegúrate de que tu imagen se llame exactamente logo.png y esté en GitHub -->
+                    <img src="./logo.png" alt="CAMT-TECH INGENIERÍA" class="h-12 md:h-16 w-auto object-contain drop-shadow-sm">
                 </div>
 
                 <!-- Desktop Menu -->
@@ -143,12 +138,12 @@
         </div>
 
         <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-200">
+        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-xl">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#nosotros" class="block px-3 py-3 text-lg font-semibold text-slate-800 hover:text-camttech-blue hover:bg-slate-50 rounded-md">Nosotros</a>
                 <a href="#productos" class="block px-3 py-3 text-lg font-semibold text-slate-800 hover:text-camttech-blue hover:bg-slate-50 rounded-md">Equipos y Software</a>
                 <a href="#servicios" class="block px-3 py-3 text-lg font-semibold text-slate-800 hover:text-camttech-blue hover:bg-slate-50 rounded-md">Servicios Integrales</a>
-                <a href="https://wa.me/573213508880" target="_blank" class="block px-3 py-3 text-lg font-bold text-white bg-[#25D366] rounded-md flex items-center justify-center gap-2 mt-4">
+                <a href="https://wa.me/573213508880" target="_blank" class="block px-3 py-3 text-lg font-bold text-white bg-[#25D366] rounded-md flex items-center justify-center gap-2 mt-4 shadow-md">
                     <i class="fa-brands fa-whatsapp text-xl"></i> Contactar por WhatsApp
                 </a>
             </div>
@@ -156,13 +151,13 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center min-h-screen w-full">
+    <section class="hero-bg relative pt-36 pb-20 lg:pt-48 lg:pb-32 flex items-center min-h-screen w-full">
         <div class="absolute inset-0 bg-slate-900/30"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <!-- Tarjeta Frosted Glass -->
-            <div class="max-w-3xl glass-panel-heavy p-10 lg:p-14 rounded-2xl">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-camttech-blue/20 bg-blue-50/90 text-camttech-blue text-sm font-bold tracking-wider uppercase mb-6 shadow-sm">
+            <div class="max-w-3xl glass-panel-heavy p-8 md:p-10 lg:p-14 rounded-2xl">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-camttech-blue/20 bg-blue-50 text-camttech-blue text-sm font-bold tracking-wider uppercase mb-6 shadow-sm">
                     <i data-lucide="award" class="w-4 h-4"></i> +20 Años de Experiencia
                 </div>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
@@ -172,7 +167,7 @@
                     Aliados estratégicos para la industria y metrología. Suministramos máquinas de ensayo, servicios de calibración ONAC, mantenimiento multimarca y automatización de laboratorios.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#productos" class="bg-camttech-blue text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-blue-900 transition-colors shadow-lg flex items-center justify-center gap-2">
+                    <a href="#productos" class="bg-[#2a3036] text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-slate-900 transition-colors shadow-lg flex items-center justify-center gap-2">
                         Ver Catálogo <i data-lucide="arrow-right" class="w-5 h-5"></i>
                     </a>
                     <a href="https://wa.me/573213508880" target="_blank" class="bg-[#25D366] text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-[#128C7E] transition-colors shadow-sm flex items-center justify-center gap-2">
@@ -199,15 +194,15 @@
 
     <!-- Nosotros Section -->
     <section id="nosotros" class="py-20 relative bg-slate-50 overflow-hidden w-full">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl -z-10"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-200/60 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-200/50 rounded-full blur-3xl -z-10"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                 <div class="mb-10 lg:mb-0 relative">
-                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80" alt="Ingenieros trabajando" class="rounded-2xl shadow-xl w-full object-cover h-[550px]">
+                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80" alt="Ingenieros trabajando" class="rounded-2xl shadow-xl w-full object-cover h-[500px] md:h-[550px]">
                     
-                    <div class="absolute -bottom-6 right-2 sm:-right-6 glass-panel p-5 rounded-xl flex items-center gap-4">
+                    <div class="absolute -bottom-6 right-2 sm:right-auto sm:-left-6 glass-panel p-5 rounded-xl flex items-center gap-4">
                         <div class="bg-camttech-blue/10 p-3 rounded-full text-camttech-blue">
                             <i data-lucide="map-pin" class="w-6 h-6"></i>
                         </div>
@@ -218,7 +213,7 @@
                     </div>
                 </div>
                 
-                <div class="glass-panel p-8 sm:p-10 rounded-2xl relative z-10">
+                <div class="glass-panel p-8 sm:p-10 rounded-2xl relative z-10 mt-10 md:mt-0">
                     <h2 class="text-camttech-blue font-bold tracking-wide uppercase text-sm mb-2">Sobre Camttech S.A.S.</h2>
                     <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6">Su Aliado Estratégico en Calidad y Metrología</h3>
                     <p class="text-slate-700 mb-4 text-lg leading-relaxed font-medium">
@@ -230,8 +225,8 @@
                     
                     <ul class="space-y-4">
                         <li class="flex items-start">
-                            <div class="flex-shrink-0 mt-1 bg-white p-1.5 rounded-full shadow-sm border border-slate-100">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-camttech-blue"></i>
+                            <div class="flex-shrink-0 mt-1 bg-white p-1.5 rounded-full shadow-sm border border-slate-100 text-camttech-blue">
+                                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
                             </div>
                             <div class="ml-3">
                                 <p class="text-slate-900 font-bold">Fabricación y Distribución</p>
@@ -239,8 +234,8 @@
                             </div>
                         </li>
                         <li class="flex items-start">
-                            <div class="flex-shrink-0 mt-1 bg-white p-1.5 rounded-full shadow-sm border border-slate-100">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-camttech-blue"></i>
+                            <div class="flex-shrink-0 mt-1 bg-white p-1.5 rounded-full shadow-sm border border-slate-100 text-camttech-blue">
+                                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
                             </div>
                             <div class="ml-3">
                                 <p class="text-slate-900 font-bold">Calibraciones Acreditadas</p>
@@ -273,11 +268,11 @@
                             <h4 class="text-xl font-bold text-slate-900 mb-3">Máquinas de Ensayo Universal</h4>
                             <p class="text-slate-600 mb-4 text-sm font-medium">Equipos electromecánicos e hidráulicos para tensión, compresión y flexión. Capacidades desde 1kN hasta 1000kN.</p>
                         </div>
-                        <a href="#contacto" class="text-camttech-blue font-bold hover:text-blue-900 flex items-center gap-1 mt-auto">Cotizar Equipo <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                        <a href="#contacto" class="text-camttech-blue font-bold hover:text-blue-700 flex items-center gap-1 mt-auto">Cotizar Equipo <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
                     </div>
                 </div>
 
-                <!-- Producto 2 (IMAGEN CORREGIDA) -->
+                <!-- Producto 2 -->
                 <div class="glass-panel rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 group flex flex-col">
                     <div class="relative h-64 overflow-hidden bg-white">
                         <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=800&q=80" alt="Línea Ingeniería Civil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -288,14 +283,14 @@
                             <h4 class="text-xl font-bold text-slate-900 mb-3">Línea de Ingeniería Civil</h4>
                             <p class="text-slate-600 mb-4 text-sm font-medium">Equipos y aditamentos especializados para ensayos en agregados, concretos, asfaltos, cementos y rocas. Prensas de compresión.</p>
                         </div>
-                        <a href="#contacto" class="text-camttech-blue font-bold hover:text-blue-900 flex items-center gap-1 mt-auto">Cotizar Línea Civil <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                        <a href="#contacto" class="text-camttech-blue font-bold hover:text-blue-700 flex items-center gap-1 mt-auto">Cotizar Línea Civil <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
                     </div>
                 </div>
 
                 <!-- Producto 3 -->
                 <div class="glass-panel rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 group flex flex-col">
                     <div class="relative h-64 overflow-hidden bg-slate-900 flex items-center justify-center">
-                        <i data-lucide="monitor-waveform" class="w-24 h-24 text-camttech-blue/50 absolute z-10"></i>
+                        <i data-lucide="monitor-waveform" class="w-24 h-24 text-camttech-blue/40 absolute z-10"></i>
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80" alt="Software SISCAL LAB" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-8 border-t border-slate-100 flex-grow flex flex-col justify-between">
@@ -303,19 +298,19 @@
                             <h4 class="text-xl font-bold text-slate-900 mb-3">Licencia Software SISCAL LAB</h4>
                             <p class="text-slate-600 mb-4 text-sm font-medium">Totalmente en español. Gráficas en tiempo real, múltiples unidades y configurado para normas internacionales (ASTM, ISO, NTC).</p>
                         </div>
-                        <a href="#contacto" class="text-camttech-blue font-bold hover:text-blue-900 flex items-center gap-1 mt-auto">Solicitar Demo <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                        <a href="#contacto" class="text-camttech-blue font-bold hover:text-blue-700 flex items-center gap-1 mt-auto">Solicitar Demo <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
                     </div>
                 </div>
             </div>
             
             <!-- Banner Suministros -->
-            <div class="mt-12 glass-panel rounded-2xl p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between border-l-4 border-l-camttech-blue shadow-lg">
+            <div class="mt-12 glass-panel rounded-2xl p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between border-l-4 border-l-camttech-blue shadow-md">
                 <div class="max-w-3xl mb-6 md:mb-0">
                     <h4 class="text-2xl font-bold text-slate-900 mb-3">Suministros, Sensores y Accesorios</h4>
                     <p class="text-slate-600 font-medium">Contamos con un amplio inventario de <strong class="text-slate-800">extensómetros de baja y alta elongación</strong>, mordazas neumáticas/mecánicas, celdas de carga y dispositivos especiales.</p>
                 </div>
                 <div class="flex-shrink-0">
-                    <a href="https://wa.me/573213508880?text=Deseo%20cotizar%20accesorios/repuestos" target="_blank" class="bg-camttech-blue text-white px-8 py-4 rounded-md font-bold hover:bg-blue-900 transition-colors shadow-lg flex items-center gap-2">
+                    <a href="https://wa.me/573213508880?text=Deseo%20cotizar%20accesorios/repuestos" target="_blank" class="bg-[#2a3036] text-white px-8 py-4 rounded-md font-bold hover:bg-slate-900 transition-colors shadow-lg flex items-center justify-center gap-2">
                         <i data-lucide="tool" class="w-5 h-5"></i> Cotizar Repuestos
                     </a>
                 </div>
@@ -323,7 +318,7 @@
         </div>
     </section>
 
-    <!-- Servicios Section -->
+    <!-- Servicios Section (Tarjetas Fotográficas) -->
     <section id="servicios" class="py-20 bg-slate-100 relative w-full">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 glass-panel inline-block px-10 py-6 rounded-2xl mx-auto max-w-2xl w-full">
@@ -331,7 +326,6 @@
                 <p class="mt-4 text-xl text-slate-600 font-medium">Respaldo técnico, mantenimiento preventivo y actualización de su laboratorio.</p>
             </div>
 
-            <!-- Grilla de Servicios con Imágenes -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
                 <!-- Servicio 1 -->
@@ -352,7 +346,7 @@
                     <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800" alt="Calibración ONAC" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     <div class="image-overlay"></div>
                     <div class="absolute top-4 right-4 z-20">
-                        <span class="bg-white text-slate-900 text-xs font-bold px-3 py-1 rounded-full shadow">ISO/IEC 17025</span>
+                        <span class="bg-white text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-md">ISO/IEC 17025</span>
                     </div>
                     <div class="absolute inset-0 p-8 flex flex-col justify-end z-20">
                         <div class="w-12 h-12 bg-camttech-blue text-white rounded-lg flex items-center justify-center mb-4 shadow-md">
@@ -420,27 +414,27 @@
     </section>
 
     <!-- Contacto / Formulario Section -->
-    <section id="contacto" class="py-20 mb-10 bg-white w-full">
+    <section id="contacto" class="py-20 bg-white w-full">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="glass-panel rounded-2xl overflow-hidden lg:flex shadow-2xl !p-0">
                 
                 <!-- Contact Info -->
-                <div class="lg:w-2/5 p-10 lg:p-14 bg-camttech-blue text-white relative">
-                    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+                <div class="lg:w-2/5 p-8 sm:p-10 lg:p-14 bg-[#2a3036] text-white relative">
+                    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
                     
                     <div class="relative z-10 flex flex-col justify-between h-full">
                         <div>
                             <h3 class="text-3xl font-bold mb-4">Hablemos de su proyecto</h3>
-                            <p class="text-blue-100 mb-10 font-medium leading-relaxed">Nuestro equipo interdisciplinario está listo para entender y satisfacer sus requerimientos normativos de manera eficiente y confiable.</p>
+                            <p class="text-slate-300 mb-10 font-medium leading-relaxed">Nuestro equipo interdisciplinario está listo para entender y satisfacer sus requerimientos normativos de manera eficiente y confiable.</p>
                             
                             <div class="space-y-8">
                                 <div class="flex items-start">
-                                    <div class="bg-white/20 p-3 rounded-lg mr-4">
-                                        <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                                    <div class="bg-white/10 p-3 rounded-lg mr-4">
+                                        <i data-lucide="map-pin" class="w-6 h-6 text-camttech-blue"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-bold text-lg">Sede Principal</h4>
-                                        <p class="text-blue-100">Calle 21 No. 5E-67<br>Cajicá, Cundinamarca</p>
+                                        <p class="text-slate-300">Calle 21 No. 5E-67<br>Cajicá, Cundinamarca</p>
                                     </div>
                                 </div>
                                 
@@ -450,23 +444,23 @@
                                     </div>
                                     <div>
                                         <h4 class="font-bold text-lg">Línea WhatsApp</h4>
-                                        <a href="https://wa.me/573213508880" target="_blank" class="text-blue-50 font-bold hover:text-white transition-colors text-lg">+57 321 350 8880</a>
+                                        <a href="https://wa.me/573213508880" target="_blank" class="text-white font-bold hover:text-[#25D366] transition-colors text-lg">+57 321 350 8880</a>
                                     </div>
                                 </div>
 
                                 <div class="flex items-center">
-                                    <div class="bg-white/20 p-3 rounded-lg mr-4">
-                                        <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                                    <div class="bg-white/10 p-3 rounded-lg mr-4">
+                                        <i data-lucide="mail" class="w-6 h-6 text-camttech-blue"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-bold text-lg">Correos Comerciales</h4>
-                                        <p class="text-blue-100">comercial1@camttech.com<br>administrativo@camttech.com</p>
+                                        <p class="text-slate-300">comercial1@camttech.com<br>administrativo@camttech.com</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mt-12 pt-8 border-t border-blue-400/30">
+                        <div class="mt-12 pt-8 border-t border-slate-700/50">
                             <p class="font-bold text-white mb-4">Síganos en nuestras redes:</p>
                             <div class="flex gap-4">
                                 <a href="https://linkedin.com/company/camttech" target="_blank" class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#0077b5] hover:bg-[#005e93] transition-colors shadow-lg">
@@ -481,7 +475,7 @@
                 </div>
 
                 <!-- Contact Form to WhatsApp -->
-                <div class="p-10 lg:p-14 lg:w-3/5 bg-slate-50">
+                <div class="p-8 sm:p-10 lg:p-14 lg:w-3/5 bg-slate-50">
                     <h3 class="text-2xl font-bold text-slate-900 mb-2">Solicitud de Cotización Rápida</h3>
                     <p class="text-slate-600 mb-8 font-medium">Llene el formulario y un ingeniero le responderá inmediatamente vía WhatsApp.</p>
                     
@@ -527,51 +521,50 @@
     </section>
 
     <!-- Footer Corporativo -->
-    <footer class="bg-slate-900 text-white py-12 border-t border-slate-800 relative z-20 w-full overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+    <footer class="bg-slate-900 text-white py-12 border-t border-slate-800 w-full mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
                 <div>
-                    <!-- Logo Footer Ajustado -->
-                    <div class="font-bold text-2xl tracking-tighter text-white flex flex-col items-start mb-4" style="font-family: Arial, Helvetica, sans-serif;">
-                        <div class="flex">
-                            CAMT<span class="text-blue-400 mx-1">-</span>TECH
+                    <!-- LOGO EXTRAÍDO DE ARCHIVO (PIE DE PÁGINA) -->
+                    <div class="flex flex-col items-start mb-6">
+                        <!-- El fondo blanco hace que las letras oscuras del logo png destaquen en el fondo negro -->
+                        <div class="bg-white/90 p-3 rounded-xl inline-block mb-3 shadow-md">
+                            <img src="./logo.png" alt="CAMT-TECH INGENIERÍA" class="h-8 md:h-10 w-auto object-contain">
                         </div>
-                        <div class="w-32 h-[1px] bg-slate-700 my-1"></div>
-                        <span class="text-[10px] tracking-widest font-normal text-slate-400 uppercase">Ingeniería</span>
                     </div>
-                    <p class="text-slate-400 text-sm max-w-sm mb-4">
+                    <p class="text-slate-400 text-sm max-w-sm">
                         Especialistas con más de 20 años de experiencia en desarrollo, comercialización, mantenimiento y calibración ONAC para la industria en Colombia.
                     </p>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-bold mb-4 text-white">Líneas de Negocio</h4>
-                    <ul class="space-y-2 text-sm text-slate-400">
-                        <li><a href="#productos" class="hover:text-camttech-blue transition-colors">Máquinas de Ensayo (1kN - 1000kN)</a></li>
-                        <li><a href="#productos" class="hover:text-camttech-blue transition-colors">Línea Ingeniería Civil (ELE)</a></li>
-                        <li><a href="#servicios" class="hover:text-camttech-blue transition-colors">Calibración Acreditada ONAC</a></li>
-                        <li><a href="#servicios" class="hover:text-camttech-blue transition-colors">Automatización y Renovación</a></li>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="#productos" class="hover:text-camttech-blue transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> Máquinas de Ensayo</a></li>
+                        <li><a href="#productos" class="hover:text-camttech-blue transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> Línea Ingeniería Civil</a></li>
+                        <li><a href="#servicios" class="hover:text-camttech-blue transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> Calibración ONAC</a></li>
+                        <li><a href="#servicios" class="hover:text-camttech-blue transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i> Automatización</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-bold mb-4 text-white">Información Legal y Contacto</h4>
-                    <p class="text-sm text-slate-400 mb-2">CIIU 2651 - Fabricación de Equipo de Medición</p>
-                    <div class="flex flex-col gap-3 mt-4">
-                        <a href="https://wa.me/573213508880" target="_blank" class="inline-flex items-center text-[#25D366] hover:text-[#128C7E] gap-2 text-sm transition-colors font-bold">
-                            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Corporativo
+                    <h4 class="text-lg font-bold mb-4 text-white">Información y Contacto</h4>
+                    <p class="text-sm text-slate-400 mb-4">CIIU 2651 - Fabricación de Equipo de Medición</p>
+                    <div class="flex flex-col gap-4 mt-2">
+                        <a href="https://wa.me/573213508880" target="_blank" class="inline-flex items-center text-[#25D366] hover:text-[#128C7E] gap-3 text-sm transition-colors font-bold bg-white/5 p-2 rounded-lg w-max">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Corporativo
                         </a>
-                        <a href="https://linkedin.com/company/camttech" target="_blank" class="inline-flex items-center text-[#0077b5] hover:text-blue-400 gap-2 text-sm transition-colors font-bold">
-                            <i class="fa-brands fa-linkedin-in text-lg"></i> Perfil en LinkedIn
+                        <a href="https://linkedin.com/company/camttech" target="_blank" class="inline-flex items-center text-[#0077b5] hover:text-blue-400 gap-3 text-sm transition-colors font-bold bg-white/5 p-2 rounded-lg w-max">
+                            <i class="fa-brands fa-linkedin-in text-xl"></i> Perfil en LinkedIn
                         </a>
                     </div>
                 </div>
             </div>
             
             <!-- Firma Profesional -->
-            <div class="border-t border-slate-800 pt-8 text-center text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
+            <div class="border-t border-slate-800 pt-8 text-center text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p>&copy; 2026 Camttech S.A.S. Todos los derechos reservados.</p>
-                <p class="mt-4 md:mt-0">Propuesta web desarrollada por <a href="https://brianmendez.me" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 font-bold transition-colors">Brian Felipe Mendez Bazurto</a></p>
+                <p>Propuesta web desarrollada por <a href="https://brianmendez.me" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 font-bold transition-colors">Brian Felipe Mendez Bazurto</a></p>
             </div>
         </div>
     </footer>
