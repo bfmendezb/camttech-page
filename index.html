@@ -22,7 +22,6 @@
         }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         html { scroll-behavior: smooth; }
@@ -83,16 +82,13 @@
 </head>
 <body class="antialiased selection:bg-camttech-blue selection:text-white relative overflow-x-hidden">
 
-    <!-- Navbar -->
     <header class="fixed w-full glass-header z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo Simulado -->
                 <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
                     <div class="flex flex-col items-center">
                         <div class="font-bold text-3xl tracking-tighter text-slate-900 flex items-center">
                             CAM<span class="text-camttech-blue flex items-center mx-1">
-                                <!-- Elemento gráfico del logo -->
                                 T<span class="inline-block w-2 h-2 bg-camttech-blue rounded-sm mx-[2px] mt-1"></span>TECH
                             </span>
                         </div>
@@ -100,7 +96,6 @@
                     </div>
                 </div>
 
-                <!-- Desktop Menu -->
                 <nav class="hidden md:flex space-x-8">
                     <a href="#nosotros" class="text-slate-700 hover:text-camttech-blue font-semibold transition-colors">Nosotros</a>
                     <a href="#productos" class="text-slate-700 hover:text-camttech-blue font-semibold transition-colors">Equipos y Máquinas</a>
@@ -108,14 +103,12 @@
                     <a href="#contacto" class="text-slate-700 hover:text-camttech-blue font-semibold transition-colors">Contacto</a>
                 </nav>
 
-                <!-- CTA Button -->
                 <div class="hidden md:flex items-center">
                     <a href="#contacto" class="bg-camttech-blue hover:bg-blue-900 text-white px-6 py-2.5 rounded-md font-semibold transition-all shadow-md flex items-center gap-2">
                         <i data-lucide="mail" class="w-4 h-4"></i> Asesoría Técnica
                     </a>
                 </div>
 
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-slate-700 hover:text-camttech-blue focus:outline-none p-2">
                         <i data-lucide="menu" class="w-6 h-6"></i>
@@ -124,7 +117,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200">
             <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
                 <a href="#nosotros" class="block px-3 py-2 text-base font-semibold text-slate-800 hover:text-camttech-blue hover:bg-slate-50 rounded-md">Nosotros</a>
@@ -135,13 +127,10 @@
         </div>
     </header>
 
-    <!-- Hero Section (Aquí SÍ va la imagen vívida) -->
     <section class="hero-bg relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center min-h-screen">
-        <!-- Overlay sutil solo para que el texto resalte, pero permitiendo ver el color -->
         <div class="absolute inset-0 bg-slate-900/10"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Tarjeta Frosted Glass -->
             <div class="max-w-3xl glass-panel-heavy p-10 lg:p-14 rounded-2xl">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-camttech-blue/20 bg-blue-50/80 text-camttech-blue text-sm font-bold tracking-wider uppercase mb-6">
                     <i data-lucide="shield-check" class="w-4 h-4"></i> Tecnología en Control de Calidad
@@ -164,7 +153,6 @@
         </div>
     </section>
 
-    <!-- Partners Section (Limpia) -->
     <section class="py-10 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-6">Equipando los laboratorios de las mejores empresas en Colombia</p>
@@ -177,9 +165,7 @@
         </div>
     </section>
 
-    <!-- Nosotros Section -->
     <section id="nosotros" class="py-20 relative bg-slate-50 overflow-hidden">
-        <!-- Manchas de color de fondo para que el cristal esmerilado tenga algo que desenfocar -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl -z-10"></div>
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-200/60 rounded-full blur-3xl -z-10"></div>
 
@@ -234,9 +220,7 @@
         </div>
     </section>
 
-    <!-- Productos Section -->
     <section id="productos" class="py-20 relative bg-white overflow-hidden">
-        <!-- Manchas de fondo -->
         <div class="absolute top-20 left-10 w-72 h-72 bg-camttech-blue/5 rounded-full blur-3xl -z-10"></div>
         <div class="absolute bottom-20 right-10 w-96 h-96 bg-slate-100 rounded-full blur-3xl -z-10"></div>
 
@@ -248,7 +232,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Producto 1 -->
                 <div class="glass-panel rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 group relative z-10">
                     <div class="relative h-60 overflow-hidden bg-white">
                         <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80" alt="Máquina de Ensayo Universal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply">
@@ -260,7 +243,6 @@
                     </div>
                 </div>
 
-                <!-- Producto 2 -->
                 <div class="glass-panel rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 group relative z-10">
                     <div class="relative h-60 overflow-hidden bg-white">
                         <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80" alt="Equipos para Plásticos y Embalajes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply">
@@ -272,7 +254,6 @@
                     </div>
                 </div>
 
-                <!-- Producto 3 -->
                 <div class="glass-panel rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 group relative z-10">
                     <div class="relative h-60 overflow-hidden bg-white">
                         <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&q=80" alt="Máquina de Ensayo de Impacto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply">
@@ -285,7 +266,6 @@
                 </div>
             </div>
             
-            <!-- Accesorios Banner Glass -->
             <div class="mt-12 glass-panel rounded-2xl p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between border-l-4 border-l-camttech-blue relative z-10">
                 <div class="max-w-2xl mb-6 md:mb-0">
                     <h4 class="text-2xl font-bold text-slate-900 mb-3">Accesorios, Mordazas y Celdas de Carga</h4>
@@ -300,7 +280,6 @@
         </div>
     </section>
 
-    <!-- Servicios Section -->
     <section id="servicios" class="py-20 bg-slate-50 relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-blue-100/40 rounded-full blur-3xl -z-10"></div>
 
@@ -310,50 +289,55 @@
                 <p class="mt-4 text-xl text-slate-600 font-medium">Respaldo integral para asegurar la continuidad de su operación.</p>
             </div>
 
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="text-center glass-panel p-8 rounded-2xl relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="text-center glass-panel p-6 rounded-2xl relative z-10 hover:-translate-y-1 transition-transform duration-300">
                     <div class="w-16 h-16 mx-auto bg-white text-camttech-blue rounded-full flex items-center justify-center mb-6 shadow-sm border border-slate-100">
                         <i data-lucide="settings" class="w-8 h-8"></i>
                     </div>
                     <h4 class="font-bold text-slate-900 text-lg mb-2">Instalación</h4>
-                    <p class="text-slate-600 text-sm font-medium">Puesta en marcha profesional asegurando la correcta integración en su laboratorio.</p>
+                    <p class="text-slate-600 text-sm font-medium">Puesta en marcha profesional asegurando la correcta integración.</p>
                 </div>
 
-                <div class="text-center glass-panel p-8 rounded-2xl relative z-10">
+                <div class="text-center glass-panel p-6 rounded-2xl relative z-10 hover:-translate-y-1 transition-transform duration-300">
                     <div class="w-16 h-16 mx-auto bg-white text-camttech-blue rounded-full flex items-center justify-center mb-6 shadow-sm border border-slate-100">
                         <i data-lucide="wrench" class="w-8 h-8"></i>
                     </div>
                     <h4 class="font-bold text-slate-900 text-lg mb-2">Mantenimiento</h4>
-                    <p class="text-slate-600 text-sm font-medium">Planes preventivos y correctivos para evitar paradas operativas inesperadas.</p>
+                    <p class="text-slate-600 text-sm font-medium">Planes preventivos para evitar paradas operativas inesperadas.</p>
                 </div>
 
-                <div class="text-center glass-panel p-8 rounded-2xl relative z-10">
+                <div class="text-center glass-panel p-6 rounded-2xl relative z-10 hover:-translate-y-1 transition-transform duration-300">
                     <div class="w-16 h-16 mx-auto bg-white text-camttech-blue rounded-full flex items-center justify-center mb-6 shadow-sm border border-slate-100">
                         <i data-lucide="file-check-2" class="w-8 h-8"></i>
                     </div>
                     <h4 class="font-bold text-slate-900 text-lg mb-2">Calibración</h4>
-                    <p class="text-slate-600 text-sm font-medium">Acompañamiento y gestión para asegurar la trazabilidad metrológica.</p>
+                    <p class="text-slate-600 text-sm font-medium">Acompañamiento y gestión para asegurar trazabilidad metrológica.</p>
                 </div>
 
-                <div class="text-center glass-panel p-8 rounded-2xl relative z-10">
+                <div class="text-center glass-panel p-6 rounded-2xl relative z-10 hover:-translate-y-1 transition-transform duration-300">
                     <div class="w-16 h-16 mx-auto bg-white text-camttech-blue rounded-full flex items-center justify-center mb-6 shadow-sm border border-slate-100">
                         <i data-lucide="graduation-cap" class="w-8 h-8"></i>
                     </div>
                     <h4 class="font-bold text-slate-900 text-lg mb-2">Capacitación</h4>
-                    <p class="text-slate-600 text-sm font-medium">Entrenamiento técnico a su personal operativo en software y hardware.</p>
+                    <p class="text-slate-600 text-sm font-medium">Entrenamiento técnico a su personal en software y hardware.</p>
+                </div>
+
+                <div class="text-center glass-panel p-6 rounded-2xl relative z-10 hover:-translate-y-1 transition-transform duration-300 sm:col-span-2 lg:col-span-1">
+                    <div class="w-16 h-16 mx-auto bg-white text-camttech-blue rounded-full flex items-center justify-center mb-6 shadow-sm border border-slate-100">
+                        <i data-lucide="cpu" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 text-lg mb-2">Automatización</h4>
+                    <p class="text-slate-600 text-sm font-medium">Integración de sistemas y automatización de procesos industriales.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Formulario / Contacto Section -->
     <section id="contacto" class="py-20 mb-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="glass-panel rounded-2xl overflow-hidden lg:flex shadow-xl !p-0">
                 
-                <!-- Contact Info -->
                 <div class="lg:w-2/5 p-10 lg:p-14 bg-camttech-blue text-white relative">
-                    <!-- Textura sutil en el lado azul -->
                     <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
                     
                     <div class="relative z-10 flex flex-col justify-between h-full">
@@ -403,7 +387,6 @@
                     </div>
                 </div>
 
-                <!-- Contact Form -->
                 <div class="p-10 lg:p-14 lg:w-3/5 bg-slate-50/50">
                     <h3 class="text-2xl font-bold text-slate-900 mb-8">Solicitud de Asesoría</h3>
                     <form action="#" method="POST" class="space-y-6" onsubmit="event.preventDefault(); alert('Solicitud enviada correctamente. Un asesor se comunicará con usted.');">
@@ -436,7 +419,7 @@
                                 <option>Sistemas de Impacto y Dureza</option>
                                 <option>Equipamiento para Plásticos/Empaques</option>
                                 <option>Accesorios (Celdas, Mordazas)</option>
-                                <option>Servicio Técnico / Calibración</option>
+                                <option>Servicio Técnico / Automatización</option>
                                 <option>Otro Requerimiento</option>
                             </select>
                         </div>
@@ -457,19 +440,17 @@
         </div>
     </section>
 
-    <!-- Footer Corporativo -->
     <footer class="bg-slate-900 text-white py-12 border-t border-slate-800 relative z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
-                    <!-- Logo Footer -->
                     <div class="font-bold text-2xl tracking-tighter text-white flex items-center mb-4">
                         CAM<span class="text-blue-400 flex items-center mx-1">
                             T<span class="inline-block w-1.5 h-1.5 bg-blue-400 rounded-sm mx-1 mt-1"></span>TECH
                         </span>
                     </div>
                     <p class="text-slate-400 text-sm max-w-sm">
-                        Especialistas en desarrollo y comercialización de equipos de medición y ensayo para la gran industria en Colombia.
+                        Especialistas en desarrollo y comercialización de equipos de medición, ensayo y automatización industrial en Colombia.
                     </p>
                 </div>
                 
@@ -478,7 +459,7 @@
                     <ul class="space-y-2 text-sm text-slate-400">
                         <li><a href="#nosotros" class="hover:text-white transition-colors">Sobre Nosotros</a></li>
                         <li><a href="#productos" class="hover:text-white transition-colors">Catálogo de Equipos</a></li>
-                        <li><a href="#servicios" class="hover:text-white transition-colors">Servicios</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition-colors">Servicios y Automatización</a></li>
                     </ul>
                 </div>
                 
@@ -493,11 +474,11 @@
             
             <div class="border-t border-slate-800 pt-8 text-center text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
                 <p>&copy; 2026 Camttech SAS. Todos los derechos reservados.</p>
+                <p class="mt-4 md:mt-0">Propuesta web desarrollada por <a href="https://brianmendez.me" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 font-bold transition-colors">Brian Felipe Mendez Bazurto</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Script Initialize Icons and Mobile Menu -->
     <script>
         // Inicializar Lucide Icons
         lucide.createIcons();
